@@ -17,11 +17,22 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(title: const Text("Hai Kevin"),),
-        body: const SafeArea(
-          child: Text("Aplikasi Akbar Hari"),)
-      )
-    );
+        appBar: AppBar(title: const Text("Hai Kevin"),
+        backgroundColor: Colors.orange,
+        actions:[
+        IconButton(onPressed: () {}, icon: const Icon(Icons.mail))
+        ],  
+        ),
+        body: SafeArea(
+          child: Container( 
+            child: Row( 
+              children: const [Image( 
+            image: AssetImage("assets/images/akbar.jpeg"),
+            height: 200)]
+            ,
+            )),
+          ))
+      );
   }
 }
 
